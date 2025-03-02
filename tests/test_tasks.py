@@ -33,7 +33,7 @@ def setup_database():
 # Test GET (should be empty at the start)
 def test_get_tasks_empty():
     response = client.get("/tasks")
-    assert response.status_code == 404
+    assert response.status_code == 200
     assert response.json() == []  # No tasks should exist initially
 
 # Test POST (Create a new task)
