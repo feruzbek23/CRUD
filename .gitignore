@@ -1,0 +1,14 @@
+__pycache__/
+env/
+*.log
+venv/
+*.env
+.env
+*.sqlite3
+test_tasks.db
+pytest_cache/
+migrations/versions/*.pyc
+
+*/migrations/
+alembic/__pycache__/
+alembic/versions/*.pyc
