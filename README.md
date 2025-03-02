@@ -49,7 +49,7 @@ GitHub Actions – Automated testing & deployment
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/feruzbek23/CRUD.git .
+git clone https://github.com/feruzbek23/CRUD.git
 ```
 2. **Create a virtual environment:** 
 ```bash
@@ -72,9 +72,9 @@ uvicorn main:app --reload
 ---
 ## 2️⃣ API Documentation
 
-Swagger UI: http://127.0.0.1:8000/docs
+Swagger UI: http://localhost:8080/docs
 
-ReDoc: http://127.0.0.1:8000/redoc
+ReDoc: http://localhost:8080/redoc
 
 
 Endpoint: GET /tasks 
