@@ -13,13 +13,26 @@ A simple **Task Management API** built with **FastAPI**, SQLite, and SQLAlchemy.
 
 ### 🔹 Installation Steps
 
-1️.**Clone the repository:**  
+1. **Clone the repository:**
 ```bash
 git clone https://github.com/yourusername/yourproject.git
 cd yourproject
-
+```
 2. **Create a virtual environment:** 
 ```bash
 python -m venv env
 source env/bin/activate  # Mac/Linux
 env\Scripts\activate  # Windows
+```
+3. **Install dependencies:**
+```bash
+pip install -r requirements.txt
+```
+4. **Apply database migrations:**
+```bash
+alembic upgrade head
+```
+5. **Run the FastAPI server**
+```bash
+uvicorn main:app --reload
+```
