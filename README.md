@@ -3,7 +3,23 @@
 A simple **Task Management API** built with **FastAPI**, SQLite, and SQLAlchemy.
 
 ---
+## 📌 Project Structure
+```bash
+📂 crud/
+ ├── 📂 .github/             
+ │   ├── 📂 workflows/       
+ ├── 📂 alembic/             
+ ├── 📂 models/              
+ ├── 📂 routes/              
+ ├── 📂 tests/               
+ ├── main.py                 
+ ├── database.py             
+ ├── requirements.txt        
+ ├── README.md               
+ ├── .gitignore              
+ ├── alembic.ini             
 
+```
 ## 📌 1️⃣ Setup Instructions
 
 ### 🔹 Prerequisites
@@ -15,8 +31,7 @@ A simple **Task Management API** built with **FastAPI**, SQLite, and SQLAlchemy.
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
+git clone https://github.com/feruzbek23/CRUD.git .
 ```
 2. **Create a virtual environment:** 
 ```bash
@@ -36,3 +51,131 @@ alembic upgrade head
 ```bash
 uvicorn main:app --reload
 ```
+---
+## 📌 2️⃣ API Documentation
+
+Swagger UI: http://127.0.0.1:8000/docs
+
+ReDoc: http://127.0.0.1:8000/redoc
+
+
+Endpoint: GET /tasks 
+
+Description: Returns a list of all tasks.
+
+Response Example:
+```bash
+{
+    "id": 1,
+    "title": "Buy groceries",
+    "description": "Milk, Eggs, Bread",
+    "completed": false
+}
+```
+
+Endpoint: POST /tasks
+
+Description: Creates a new task.
+
+Request Example:
+```bash
+{
+  "title": "Read a book",
+  "description": "Finish reading a novel",
+  "completed": false
+}
+```
+Response Example:
+```bash
+{
+  "id": 2,
+  "title": "Read a book",
+  "description": "Finish reading a novel",
+  "completed": false
+}
+```
+
+Endpoint: GET /tasks/{id}
+
+Description: Fetches a specific task by its id.
+
+Request Example:
+```bash
+{
+  "id": 2,
+  "title": "Read a book",
+  "description": "Finish reading a novel",
+  "completed": false
+}
+```
+Error Handling Example: (If Task Not Found):
+```bash
+{
+  "detail": "Task not found"
+}
+```
+
+Endpoint: PUT /tasks/{id}
+
+Description: Updates an existing task by id.
+
+Request Example:
+```bash
+{
+  "title": "Read a book",
+  "description": "Finish two chapters",
+  "completed": true
+}
+```
+Response Example:
+```bash
+{
+  "id": 2,
+  "title": "Read a book",
+  "description": "Finish two chapters",
+  "completed": true
+}
+```
+Error Handling Example: (If Task Not Found):
+```bash
+{
+  "detail": "Task not found"
+}
+```
+
+Endpoint: DELETE /tasks/{id}
+
+Description: Removes a task by id.
+
+Response Example:
+```bash
+{
+  "message": "Task deleted successfully"
+}
+```
+Error Handling Example: (If Task Not Found)
+```bash
+{
+  "detail": "Task not found"
+}
+```
+---
+## 📌 3️⃣ CI/CD Pipeline
+This project uses GitHub Actions:
+
+✔ Run tests automatically on every push
+
+✔ Deploy the API to a cloud platform (e.g., Heroku, AWS)
+
+🔹 CI/CD Steps:
+1. Install dependencies
+2. Run tests (pytest)
+3. Deploy (optional)
+
+
+
+
+
+
+
+
