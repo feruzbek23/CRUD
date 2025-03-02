@@ -20,6 +20,24 @@ A simple **Task Management API** built with **FastAPI**, SQLite, and SQLAlchemy.
  ├── alembic.ini             
 
 ```
+## 📌 Technology Used
+Python – Programming language
+
+FastAPI – Web framework for building APIs
+
+SQLAlchemy & Alembic – Database ORM & migrations
+
+Pydantic – Data validation & serialization
+
+SQLite – Lightweight database
+
+Pytest & HTTPX – Testing framework & API client
+
+GitHub Actions – Automated testing & deployment
+
+
+
+
 ## 📌 1️⃣ Setup Instructions
 
 ### 🔹 Prerequisites
