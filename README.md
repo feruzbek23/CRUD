@@ -1,9 +1,9 @@
-# 🚀 Tasks
+# Task Management
 
 A simple **Task Management API** built with **FastAPI**, SQLite, and SQLAlchemy.
 
 ---
-## 📌 Project Structure
+## Project Structure
 ```bash
 📂 crud/
  ├── 📂 .github/             
@@ -20,7 +20,7 @@ A simple **Task Management API** built with **FastAPI**, SQLite, and SQLAlchemy.
  ├── alembic.ini             
 
 ```
-## 📌 Technology Used
+## Technology Used
 Python – Programming language
 
 FastAPI – Web framework for building APIs
@@ -38,7 +38,7 @@ GitHub Actions – Automated testing & deployment
 
 
 
-## 📌 1️⃣ Setup Instructions
+## 1️⃣ Setup Instructions
 
 ### 🔹 Prerequisites
 - Python 3.10+
@@ -70,7 +70,7 @@ alembic upgrade head
 uvicorn main:app --reload
 ```
 ---
-## 📌 2️⃣ API Documentation
+## 2️⃣ API Documentation
 
 Swagger UI: http://127.0.0.1:8000/docs
 
@@ -178,7 +178,7 @@ Error Handling Example: (If Task Not Found)
 }
 ```
 ---
-## 📌 3️⃣ CI/CD Pipeline
+## 3️⃣ CI/CD Pipeline
 This project uses GitHub Actions:
 
 ✔ Run tests automatically on every push
