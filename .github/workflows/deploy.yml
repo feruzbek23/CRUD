@@ -64,5 +64,6 @@ jobs:
               pip install -r requirements.txt
               
               # sudo systemctl restart your-app.service
+              exit
             EOF
 
