@@ -41,6 +41,10 @@ jobs:
 
 
       steps:
+        - name: Add Server to Known Hosts
+          run: |
+            mkdir -p ~/.ssh
+            ssh-keyscan -H 139.162.134.90 >> ~/.ssh/known_hosts
         - name: SSH and Deploy
           run: |
             ssh -o StrictHostKeyChecking=no -tt root@139.162.134.90 << EOF
