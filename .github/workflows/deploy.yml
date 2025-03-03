@@ -58,6 +58,8 @@ jobs:
               cd /root/CRUD
               # Pull the latest code from the repository
               git pull origin main
+              # Activate the virtual environment
+              source env/bin/activate
               # Install any new dependencies
               pip install -r requirements.txt
               
