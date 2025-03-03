@@ -32,4 +32,34 @@ jobs:
             - name: Run Tests
               run: |
                 PYTHONPATH=. pytest -v
+    
+
+    deploy:
+      runs-on: ubuntu-latest
+      needs: test
+      if: success()
+
+
+      steps:
+        - name: Set up SSH
+          run: |
+            mkdir -p ~/.ssh
+            echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+            chmod 600 ~/.ssh/id_ed25519
+            eval "$(ssh-agent -s)"
+            ssh-add ~/.ssh/id_ed25519
+            ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+
+        - name: Deploy to Linode
+          run: |
+            ssh -o StrictHostKeyChecking=no root@139.162.134.90 << 'EOF'
+              # Navigate to the project directory
+              cd /root/CRUD
+              # Pull the latest code from the repository
+              git pull origin main
+              # Install any new dependencies
+              pip install -r requirements.txt
+              
+              # sudo systemctl restart your-app.service
+            EOF
 
