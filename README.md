@@ -57,15 +57,19 @@ python -m venv env
 source env/bin/activate  # Mac/Linux
 env\Scripts\activate  # Windows
 ```
-3. **Install dependencies:**
+3. **Upgrade pip:**
+```bash
+pip install --upgrade pip
+```
+4. **Install dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
-4. **Apply database migrations:**
+5. **Apply database migrations:**
 ```bash
 alembic upgrade head
 ```
-5. **Run the FastAPI server**
+6. **Run the FastAPI server**
 ```bash
 uvicorn main:app --port 8080
 ```

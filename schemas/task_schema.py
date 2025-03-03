@@ -1,8 +1,8 @@
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class TaskCreate(BaseModel):
-    title: str
+    title: str = Field(..., min_length=1, example="Buy groceries")
     description: str = ""
 
 
