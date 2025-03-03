@@ -187,12 +187,13 @@ This project uses GitHub Actions:
 
 ✔ Run tests automatically on every push
 
-✔ Deploy the API to a cloud platform (e.g., Heroku, AWS)
+✔ Deploy the API to a cloud platform (Linode)
 
 🔹 CI/CD Steps:
 1. Install dependencies
 2. Run tests (pytest)
-3. Deploy (optional)
+3. Connect SSH
+4. Deploy to cloud
 
 
 

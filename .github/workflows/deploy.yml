@@ -63,6 +63,10 @@ jobs:
               # Install any new dependencies
               pip install -r requirements.txt
               
+              pkill -f 'uvicorn main:app'
+
+              # Start Uvicorn again with the updated code
+              nohup uvicorn main:app --host 0.0.0.0 --port 8080 &
               exit
             EOF
 
