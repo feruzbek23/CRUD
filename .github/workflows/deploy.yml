@@ -52,7 +52,7 @@ jobs:
 
         - name: Deploy to Linode
           run: |
-            ssh -t -o StrictHostKeyChecking=no root@139.162.134.90 << 'EOF'
+            ssh -tt root@139.162.134.90 << EOF
               # Navigate to the project directory
               cd /root/CRUD
               # Pull the latest code from the repository
