@@ -67,7 +67,7 @@ alembic upgrade head
 ```
 5. **Run the FastAPI server**
 ```bash
-uvicorn main:app --reload
+uvicorn main:app --port 8080
 ```
 ---
 ## 2️⃣ API Documentation
