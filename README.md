@@ -193,7 +193,20 @@ This project uses GitHub Actions:
 1. Install dependencies
 2. Run tests (pytest)
 3. Connect SSH
-4. Deploy to cloud
+4. Deploy to cloud 
+
+To reach cloud server:
+
+GET http://139.162.134.90:8080/tasks
+
+POST http://139.162.134.90:8080/tasks
+
+GET http://139.162.134.90:8080/tasks/{id}
+
+PUT http://139.162.134.90:8080/tasks/{id}
+
+DELETE http://139.162.134.90:8080/tasks/{id}
+
 
 
 
