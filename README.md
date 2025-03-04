@@ -9,15 +9,18 @@ A simple **Task Management API** built with **FastAPI**, SQLite, and SQLAlchemy.
  ├── 📂 .github/             
  │   ├── 📂 workflows/       
  ├── 📂 alembic/             
- ├── 📂 models/              
- ├── 📂 routes/              
+ ├── 📂 models/
+ ├── 📂 schemas/            
+ ├── 📂 routers/              
  ├── 📂 tests/               
  ├── main.py                 
  ├── database.py             
  ├── requirements.txt        
  ├── README.md               
  ├── .gitignore              
- ├── alembic.ini             
+ ├── alembic.ini
+ ├── LICENSE
+ ├── tasks.db            
 
 ```
 ## Technology Used
